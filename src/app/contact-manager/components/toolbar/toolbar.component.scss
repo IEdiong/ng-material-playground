@@ -1,0 +1,17 @@
+.sidenav-toggle {
+  display: none;
+  border-radius: 0%;
+
+  @media (max-width: 720px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  mat-icon {
+    margin: 0;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+  }
+}

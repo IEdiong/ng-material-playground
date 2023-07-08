@@ -1,1 +1,12 @@
-<p>toolbar works!</p>
+<mat-toolbar color="primary">
+  <button
+    mat-flat-button
+    color="primary"
+    class="sidenav-toggle"
+    aria-label="Example icon-button with menu icon"
+    (click)="toggleSidenav.emit()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Contacts</span>
+</mat-toolbar>
