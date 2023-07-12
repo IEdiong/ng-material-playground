@@ -22,6 +22,10 @@ export class UserService {
     return this._users.asObservable();
   }
 
+  public userById(id: number) {
+    return this._dataStore.users.find((user) => user.id == id);
+  }
+
   //! Method to handle request errors
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {

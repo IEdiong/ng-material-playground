@@ -10,15 +10,14 @@
     </mat-toolbar>
     <mat-nav-list class="app-sidenav-list">
       <mat-list-item *ngFor="let user of users | async">
-        <a matListItemTitle href="#">
+        <a matListItemTitle [routerLink]="['/contact-manager', user.id]">
           <mat-icon svgIcon="{{ user.avatar }}"></mat-icon>
           {{ user.name }}
         </a>
-        <!-- <button mat-icon-button (click)="showInfo(link)" matListItemMeta>
-         </button> -->
       </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
+
   <mat-sidenav-content class="app-sidenav-content">
     <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>
     <div class="wrapper">
