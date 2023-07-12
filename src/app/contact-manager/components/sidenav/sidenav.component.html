@@ -8,11 +8,14 @@
     <mat-toolbar color="primary">
       <span>Contacts</span>
     </mat-toolbar>
-    <mat-list role="list">
-      <mat-list-item role="listitem">Item 1</mat-list-item>
-      <mat-list-item role="listitem">Item 2</mat-list-item>
-      <mat-list-item role="listitem">Item 3</mat-list-item>
-    </mat-list>
+    <mat-nav-list class="app-sidenav-list">
+      <mat-list-item *ngFor="let user of users | async">
+        <a matListItemTitle href="#">{{ user.name }}</a>
+        <!-- <button mat-icon-button (click)="showInfo(link)" matListItemMeta>
+            <mat-icon>info</mat-icon>
+         </button> -->
+      </mat-list-item>
+    </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content class="app-sidenav-content">
     <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>

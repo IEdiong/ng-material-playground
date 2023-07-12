@@ -14,6 +14,12 @@
   height: 100vh;
 }
 
+.app-sidenav-list {
+  & a {
+    text-decoration: none;
+  }
+}
+
 .wrapper {
   margin: 3rem;
 }

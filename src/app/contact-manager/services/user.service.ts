@@ -48,10 +48,6 @@ export class UserService {
     return this.http
       .get<User[]>(this.url, options)
       .pipe(catchError(this.handleError));
-    // return this.http.get<User[]>(url).subscribe(
-    //   (data) => (this._dataStore.users = data),
-    //   (error) => console.log('Failed to retrieve data from Azure', error)
-    // );
   }
 
   public loadAll() {

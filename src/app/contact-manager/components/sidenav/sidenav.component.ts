@@ -31,8 +31,8 @@ export class SidenavComponent implements OnInit {
     this.users = this.userService.users;
     this.userService.loadAll();
 
-    this.users.subscribe((data: User[]) => {
-      console.log(data);
-    });
+    // this.users.subscribe((data: User[]) => {
+    //   console.log(data);
+    // });
   }
 }
