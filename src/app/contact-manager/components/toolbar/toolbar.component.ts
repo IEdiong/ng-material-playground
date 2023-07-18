@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { NewContactDialogComponent } from '../new-contact-dialog/new-contact-dialog.component';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,4 +9,12 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ToolbarComponent {
   @Output() toggleSidenav = new EventEmitter<void>();
+
+  constructor(public dialog: MatDialog) {}
+
+  openAddContactDialog(): void {
+    this.dialog.open(NewContactDialogComponent, {
+      width: '600px',
+    });
+  }
 }

@@ -16,6 +16,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [],
@@ -36,6 +37,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatInputModule,
     MatSortModule,
     MatMenuModule,
+    MatDialogModule,
   ],
 })
 export class MaterialModule {}
