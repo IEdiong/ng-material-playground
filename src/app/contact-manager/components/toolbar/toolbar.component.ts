@@ -10,7 +10,7 @@ import { NewContactDialogComponent } from '../new-contact-dialog/new-contact-dia
 export class ToolbarComponent {
   @Output() toggleSidenav = new EventEmitter<void>();
 
-  constructor(public dialog: MatDialog) {}
+  constructor(private dialog: MatDialog) {}
 
   openAddContactDialog(): void {
     let dialogRef = this.dialog.open(NewContactDialogComponent, {
