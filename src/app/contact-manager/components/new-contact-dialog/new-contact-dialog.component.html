@@ -11,6 +11,7 @@
       </mat-option>
     </mat-select>
   </mat-form-field>
+
   <mat-form-field>
     <mat-label>Name</mat-label>
     <input matInput placeholder="John Doe" [formControl]="name" required />
@@ -18,10 +19,18 @@
   </mat-form-field>
 
   <mat-form-field>
+    <mat-label>MM/DD/YYYY</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="user.birthDate" />
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
     <mat-label>Bio</mat-label>
     <textarea matInput [(ngModel)]="user.bio"></textarea>
   </mat-form-field>
 </div>
+
 <div mat-dialog-actions>
   <button
     mat-button
