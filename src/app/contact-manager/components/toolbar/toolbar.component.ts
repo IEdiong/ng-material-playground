@@ -13,8 +13,12 @@ export class ToolbarComponent {
   constructor(public dialog: MatDialog) {}
 
   openAddContactDialog(): void {
-    this.dialog.open(NewContactDialogComponent, {
-      width: '600px',
+    let dialogRef = this.dialog.open(NewContactDialogComponent, {
+      width: '420px',
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('Dialog closed', result);
     });
   }
 }
