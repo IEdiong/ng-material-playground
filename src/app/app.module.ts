@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'demo' },
   {
     path: 'contact-manager',
     loadChildren: () =>
@@ -19,7 +20,7 @@ const routes: Routes = [
     path: 'demo',
     loadChildren: () => import('./demo/demo.module').then((m) => m.DemoModule),
   },
-  { path: '**', redirectTo: 'contact-manager' },
+  { path: '**', redirectTo: 'demo' },
 ];
 
 @NgModule({
