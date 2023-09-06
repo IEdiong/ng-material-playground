@@ -2,17 +2,17 @@ import { Component, ViewChild } from '@angular/core';
 
 import {
   ChartComponent,
-  ApexAxisChartSeries,
   ApexChart,
-  ApexXAxis,
   ApexTitleSubtitle,
+  ApexNonAxisChartSeries,
+  ApexLegend,
 } from 'ng-apexcharts';
 
 export type ChartOptions = {
-  series: ApexAxisChartSeries;
+  series: ApexNonAxisChartSeries;
   chart: ApexChart;
-  xaxis: ApexXAxis;
   title: ApexTitleSubtitle;
+  legend: ApexLegend;
 };
 
 @Component({
@@ -26,31 +26,16 @@ export class ChartsComponent {
 
   constructor() {
     this.chartOptions = {
-      series: [
-        {
-          name: 'My-series',
-          data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
-        },
-      ],
+      series: [10, 41, 35, 51, 91, 148],
       chart: {
-        height: 350,
-        type: 'bar',
+        height: '500px',
+        type: 'donut',
       },
       title: {
         text: 'Angular Chart',
       },
-      xaxis: {
-        categories: [
-          'Jan',
-          'Feb',
-          'Mar',
-          'Apr',
-          'May',
-          'Jun',
-          'Jul',
-          'Aug',
-          'Sep',
-        ],
+      legend: {
+        show: false,
       },
     };
   }
