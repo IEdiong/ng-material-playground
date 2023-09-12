@@ -1,1 +1,25 @@
-<p>reactive-form works!</p>
+<div>
+  <form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+    <label for="course">Course:</label>
+    <input
+      type="text"
+      id="course"
+      formControlName="course"
+      placeholder="Course"
+    />
+    <br />
+    <button type="button" (click)="addPerson()">Add Person</button>
+    <div formArrayName="people">
+      <div
+        *ngFor="let personGroup of people.controls; let i = index"
+        [formGroupName]="i"
+      >
+        <input type="text" formControlName="name" placeholder="Name" />
+        <input type="number" formControlName="age" placeholder="Age" />
+        <button type="button" (click)="removePerson(i)">Remove</button>
+        <br />
+      </div>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>

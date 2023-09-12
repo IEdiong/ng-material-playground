@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ButtonsComponent } from './buttons/buttons.component';
 
 import { MaterialModule } from '../shared/material.module';
-import { FormsModule } from '@angular/forms';
 import { FlexboxComponent } from './flexbox/flexbox.component';
 import { DemoComponent } from './demo.component';
 import { UserComponent } from './user/user.component';
@@ -43,6 +43,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     MaterialModule,
     FormsModule,
+    ReactiveFormsModule,
     NgApexchartsModule,
   ],
   exports: [RouterModule],
