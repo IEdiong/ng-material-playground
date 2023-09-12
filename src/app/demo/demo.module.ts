@@ -12,6 +12,7 @@ import { UserComponent } from './user/user.component';
 import { AssessmentComponent } from './assessment/assessment.component';
 import { ChartsComponent } from './charts/charts.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 const routes: Routes = [
   {
@@ -20,7 +21,9 @@ const routes: Routes = [
     children: [
       { path: 'user', component: UserComponent },
       { path: 'assessment', component: AssessmentComponent },
-      { path: '', component: ChartsComponent },
+      { path: 'reactive-form', component: ReactiveFormComponent },
+      { path: 'apex-chart', component: ChartsComponent },
+      { path: '', component: ReactiveFormComponent },
     ],
   },
 ];
@@ -33,6 +36,7 @@ const routes: Routes = [
     UserComponent,
     AssessmentComponent,
     ChartsComponent,
+    ReactiveFormComponent,
   ],
   imports: [
     CommonModule,
